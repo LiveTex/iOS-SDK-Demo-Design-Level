@@ -28,7 +28,7 @@
 - (IBAction)presentController:(id)sender {
     LTMobileSDKInitializationParams *parameters = [[LTMobileSDKInitializationParams alloc] init];
     parameters.sdkKey = @"demo";
-    parameters.applicationId = @"111150";
+    parameters.applicationId = @"106217";
     
     //initialize livetex core with parameters
     [[LKManager sharedManager] registerWithParameters:parameters];
