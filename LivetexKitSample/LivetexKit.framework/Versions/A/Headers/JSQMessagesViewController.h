@@ -61,7 +61,7 @@
  *
  *  @discussion This value does not have to be unique. This value must not be `nil`.
  */
-@property (copy, nonatomic) NSString *senderDisplayName;
+@property (copy, nonatomic) NSString *senderName;
 
 /**
  *  The string identifier that uniquely identifies the current user sending messages.
@@ -70,7 +70,7 @@
  *  All message data objects returned by `collectionView:messageDataForItemAtIndexPath:` are
  *  checked against this identifier. This value must not be `nil`.
  */
-@property (copy, nonatomic) NSString *senderId;
+@property (copy, nonatomic) NSString *senderID;
 
 /**
  *  Specifies whether or not the view controller should automatically scroll to the most recent message
@@ -183,8 +183,8 @@
  */
 - (void)didPressSendButton:(UIButton *)button
            withMessageText:(NSString *)text
-                  senderId:(NSString *)senderId
-         senderDisplayName:(NSString *)senderDisplayName
+                  senderID:(NSString *)senderID
+                senderName:(NSString *)senderName
                       date:(NSDate *)date;
 
 

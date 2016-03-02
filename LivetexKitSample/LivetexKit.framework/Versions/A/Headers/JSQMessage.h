@@ -30,14 +30,14 @@
 @interface JSQMessage : NSObject <JSQMessageData, NSCoding, NSCopying>
 
 /**
- *  Returns the string identifier that uniquely identifies the user who sent the message. 
+ *  Returns the string identifier that uniquely identifies the user who sent the message.
  */
-@property (copy, nonatomic, readonly) NSString *senderId;
+@property (copy, nonatomic, readonly) NSString *senderID;
 
 /**
  *  Returns the display name for the user who sent the message. This value does not have to be unique.
  */
-@property (copy, nonatomic, readonly) NSString *senderDisplayName;
+@property (copy, nonatomic, readonly) NSString *senderName;
 
 /**
  *  Returns the date that the message was sent.
@@ -79,7 +79,7 @@
  *  @return An initialized `JSQMessage` object if successful, `nil` otherwise.
  */
 + (instancetype)messageWithSenderID:(NSString *)senderID
-                        displayName:(NSString *)displayName
+                         senderName:(NSString *)senderName
                                date:(NSDate *)date
                                text:(NSString *)text;
 
@@ -95,24 +95,27 @@
  *
  *  @return An initialized `JSQMessage` object if successful, `nil` otherwise.
  */
-- (instancetype)initWithSenderId:(NSString *)senderId
-               senderDisplayName:(NSString *)senderDisplayName
+- (instancetype)initWithSenderID:(NSString *)senderID
+                      senderName:(NSString *)senderName
                             date:(NSDate *)date
                             text:(NSString *)text;
+
 /**
  *  Initializes and returns a message object having the given senderId, displayName, media,
  *  and current system date.
  *
  *  @param senderId    The unique identifier for the user who sent the message. This value must not be `nil`.
  *  @param displayName The display name for the user who sent the message. This value must not be `nil`.
+ *  @param date        The date that the message was sent. This value must not be `nil`.
  *  @param media       The media data for the message. This value must not be `nil`.
  *
  *  @discussion Initializing a `JSQMessage` with this method will set `isMediaMessage` to `YES`.
  *
  *  @return An initialized `JSQMessage` object if successful, `nil` otherwise.
  */
-+ (instancetype)messageWithSenderId:(NSString *)senderId
-                        displayName:(NSString *)displayName
++ (instancetype)messageWithSenderID:(NSString *)senderID
+                         senderName:(NSString *)senderName
+                               date:(NSDate *)date
                               media:(id<JSQMessageMediaData>)media;
 
 /**
@@ -127,8 +130,8 @@
  *
  *  @return An initialized `JSQMessage` object if successful, `nil` otherwise.
  */
-- (instancetype)initWithSenderId:(NSString *)senderId
-               senderDisplayName:(NSString *)senderDisplayName
+- (instancetype)initWithSenderID:(NSString *)senderID
+                      senderName:(NSString *)senderName
                             date:(NSDate *)date
                            media:(id<JSQMessageMediaData>)media;
 

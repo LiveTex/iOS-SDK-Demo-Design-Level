@@ -35,9 +35,10 @@ typedef NS_ENUM(NSUInteger, LKAlertControllerStyle) {
 
 @interface LKAlertController : NSObject
 
-+ (instancetype)alertControllerWithTitle:(NSString *)title message:(NSString *)message preferredStyle:(LKAlertControllerStyle)preferredStyle actions:(NSArray *)actions;
-+ (instancetype)alertControllerWithTitle:(NSString *)title message:(NSString *)message duration:(NSTimeInterval)duration preferredStyle:(LKAlertControllerStyle)preferredStyle actions:(NSArray *)actions;
+- (instancetype)initWithTitle:(NSString *)title message:(NSString *)message preferredStyle:(LKAlertControllerStyle)preferredStyle actions:(NSArray *)actions;
 
-- (void)presentInViewController:(UIViewController *)owner;
++ (instancetype)alertControllerWithTitle:(NSString *)title message:(NSString *)message preferredStyle:(LKAlertControllerStyle)preferredStyle actions:(NSArray *)actions;
+
+- (void)presentInViewController:(UIViewController *)owner completion:(void (^)(void))completion;
 
 @end

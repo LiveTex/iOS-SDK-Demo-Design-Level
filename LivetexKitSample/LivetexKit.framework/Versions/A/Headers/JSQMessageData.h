@@ -43,14 +43,14 @@
  *
  *  @warning You must not return `nil` from this method. This value must be unique.
  */
-- (NSString *)senderId;
+- (NSString *)senderID;
 
 /**
  *  @return The display name for the user who sent the message.
  *
  *  @warning You must not return `nil` from this method.
  */
-- (NSString *)senderDisplayName;
+- (NSString *)senderName;
 
 /**
  *  @return The date that the message was sent.

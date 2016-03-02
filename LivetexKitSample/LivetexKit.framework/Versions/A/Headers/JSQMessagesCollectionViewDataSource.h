@@ -41,7 +41,7 @@
  *  
  *  @warning You must not return `nil` from this method. This value does not need to be unique.
  */
-- (NSString *)senderDisplayName;
+- (NSString *)senderName;
 
 /**
  *  Asks the data source for the current sender's unique identifier, that is, the current user who is sending messages.
@@ -50,7 +50,7 @@
  *
  *  @warning You must not return `nil` from this method. This value must be unique.
  */
-- (NSString *)senderId;
+- (NSString *)senderID;
 
 /**
  *  Asks the data source for the message data that corresponds to the specified item at indexPath in the collectionView.

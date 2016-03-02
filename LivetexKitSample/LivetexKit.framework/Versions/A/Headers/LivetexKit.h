@@ -13,3 +13,4 @@
 #import <LivetexKit/LKAlertController.h>
 #import <LivetexKit/LKPopupView.h>
 #import <LivetexKit/LKManager.h>
+#import <LivetexKit/LKDevice.h>
