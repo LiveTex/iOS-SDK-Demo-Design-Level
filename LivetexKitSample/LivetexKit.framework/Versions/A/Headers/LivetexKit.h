@@ -11,6 +11,7 @@
 #import <LivetexKit/LKNavigationController.h>
 #import <LivetexKit/LKDatabaseController.h>
 #import <LivetexKit/LKAlertController.h>
+#import <LivetexKit/LKAppearance.h>
 #import <LivetexKit/LKPopupView.h>
 #import <LivetexKit/LKManager.h>
 #import <LivetexKit/LKDevice.h>
