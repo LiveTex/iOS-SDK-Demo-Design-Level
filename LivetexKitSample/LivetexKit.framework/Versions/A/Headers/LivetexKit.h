@@ -15,3 +15,6 @@
 #import <LivetexKit/LKPopupView.h>
 #import <LivetexKit/LKManager.h>
 #import <LivetexKit/LKDevice.h>
+
+
+#define LivetexKitVersion  @"1.5.0"
